@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    
+    background: url("bg.png") center/cover no-repeat fixed;
+
+    margin: 0;
+    padding: 20px;
+    color: #fff; 
+}
+
+
+h1 {
+    margin-bottom: 20px;
+}
+
+
+.mode-select button {
+    background-color: #e74c3c; 
+    color: white;             
+    border: none;              
+    padding: 15px 30px;       
+    font-size: 1.2rem;        
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;        
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2),
+                0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    margin: 5px;
+}
+
+
+.mode-select button:hover {
+    background-color: #c0392b; 
+    transform: scale(1.05);    
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25),
+                0 3px 6px rgba(0,0,0,0.15);
+}
+
+
+.mode-select button:active {
+    transform: scale(0.97);    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15),
+                0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    color: black;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    border: 2px solid #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 
+        4px 4px 8px rgba(0, 0, 0, 0.4),
+        -4px -4px 8px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    user-select: none;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        6px 6px 14px rgba(0, 0, 0, 0.5),
+        -6px -6px 14px rgba(255, 255, 255, 0.9);
+}
+
+.cell:active {
+    transform: scale(0.95);
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+}
+
+
+.status {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#restartButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
